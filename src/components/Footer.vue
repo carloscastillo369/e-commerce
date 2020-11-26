@@ -36,6 +36,7 @@ export default {
     @media screen and (min-device-width:1366px){
         .contain {
             width: 1366px;
+            padding-left: 70px;
         }
     }
 </style>

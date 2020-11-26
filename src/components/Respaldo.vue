@@ -13,7 +13,7 @@ export default {
 <style scoped>
     .contain {
         width: 375px;
-        height: 165px;
+        height: 150px;
         margin: 0 auto;
         padding: 10px;
         padding-top: 40px;
@@ -22,9 +22,8 @@ export default {
     @media screen and (min-device-width:1366px){
         .contain {
             width: 1366px;
-            height: 241px;
-            padding: 85px;
-            padding-top: 48px;
+            height: 180px;
+            padding: 48px 85px;
         }
     }
 </style>

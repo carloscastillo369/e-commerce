@@ -23,17 +23,15 @@
 
         </div>
                 
-        <div class="card">
+        <div  class="card">
             <img src="./../../public/img/bene3.png" alt="">
-            <div>
+            <div id="formulario">
                 <h4>Empleabilidad</h4>
                 <p>Al finalizar el programa y certificarte a nombre de IDAT, podrás acceder a ofertas 
                 laborales especialmente identificadas para la comunidad PachaQTec, a través de 
                 nuestra plataforma de empleabilidad IDAT JOB.</p>
             </div>
-
         </div>
-
     </div>
 </template>
 
@@ -46,7 +44,7 @@ export default {
 <style scoped>
     .contain {
         width: 375px;
-        height: 453px;
+        height: 490px;
         margin: 0 auto;
         background: #FFFFFF;
         padding: 0 10px;

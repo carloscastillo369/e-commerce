@@ -1,9 +1,9 @@
 <template>
     <div class="item">
         <img class="imagen" :src="`/img/${curso.imagen}.jpg`" alt="">
-        <div class="bg">
+        <div v-if="curso.descripcion != ''" class="bg">
             <h3>{{curso.nombre}}</h3>
-            <p>{{curso.precio}}</p>
+            <p>S/. {{curso.precio}}</p>
             <div class="enlaces">
                 <button>Agregar al carrito</button>
                 <router-link 
@@ -12,6 +12,11 @@
                     Ver más
                 </router-link>
             </div>
+        </div>
+
+        <div v-else class="bg">
+            <h3 class="proximo-curso">{{curso.nombre}}</h3>
+            <p class="proximo">PROXIMAMENTE</p>
         </div>
     </div>
 </template>
@@ -84,12 +89,19 @@ export default {
     }
 
     .mas {
-        margin-right: 10px;
+        margin-right: 2px;
     }
 
     a {
         text-decoration: none;
         color: inherit;
+    }
+
+    .proximo {
+        margin-top: 30px;
+        font-size: 16px;
+        position: relative;
+        text-align: right;
     }
 
     @media screen and (min-device-width:1366px){

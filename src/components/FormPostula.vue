@@ -1,5 +1,5 @@
 <template>
-    <div id="formulario" class="contain">
+    <div class="contain">
         <h3>Postula y obtén un 10% de descuento en el programa</h3>
         <form>
             <b-form-input type="text" placeholder="NOMBRE"></b-form-input>
@@ -42,7 +42,7 @@ export default {
         font-weight: bold;
         margin-bottom: 20px;
         padding-left: 10px;
-        padding-top: 65px;
+        padding-top: 20px;
     }
 
     form {

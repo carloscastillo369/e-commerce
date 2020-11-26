@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div :class="['header', bgdark]">     
         <div class="contain">
             <div class="logo">
                 <img src="./../../public/img/logo.png">
@@ -24,7 +24,6 @@
                     </template>
                 </b-dropdown>
             </div>
-
         </div>
     </div>
 </template>
@@ -38,6 +37,9 @@ export default {
     components: {
         Carrito,
         Cursos
+    },
+    props: {
+        bgdark:String
     }
 }
 </script>
@@ -75,6 +77,10 @@ export default {
             display: flex;
             flex-direction: column;
             display: flex;
+        }
+
+        .bgdark {
+            background: rgba(28,28,30,0.7);
         }
     }
 </style>

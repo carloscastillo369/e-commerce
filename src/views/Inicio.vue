@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Header/>
         <Banner/>
         <FormMobile/>
         <Respaldo/>
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import Header from "@/components/Header.vue"
 import Banner from "@/components/Banner.vue"
 import FormMobile from "@/components/FormMobile.vue"
 import Respaldo from "@/components/Respaldo.vue"
@@ -24,6 +26,7 @@ import Footer from "@/components/Footer.vue"
 export default {
     name: 'Inicio',
     components: {
+        Header,
         Banner,
         FormMobile,
         Respaldo,
@@ -41,9 +44,5 @@ export default {
     div {
         background: #F2F3F5;
         width: 100vw;
-    }
-
-    Footer {
-        background: yellow;
     }
 </style>

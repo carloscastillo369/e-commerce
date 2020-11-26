@@ -66,5 +66,9 @@ export default {
         .items {
             justify-content: space-between;
         }
+
+        h2 {
+            padding: 0;
+        }
     }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div> 
-        <div v-if="curso == undefined" class="banner">
+        <div v-if="bgcurso == undefined" class="banner">
             <img class="banner-img" src="./../../public/img/banner.png" alt="">
             <div class="contain">
                 <h1>!Explota todo tu potencial <br> tecnológico!</h1>
@@ -10,9 +10,9 @@
         </div>
 
         <div v-else class="banner">    
-            <img class="banner-img" :src="`/img/${curso.imagen}.jpg`" alt="">
+            <img class="banner-img" :src="`/img/${bgcurso.imagen}.jpg`" alt="">
             <div class="bg">
-                <h1>{{curso.nombre}}</h1>
+                <h1 class="nombre-curso">{{bgcurso.nombre}}</h1>
                 <a href="#formulario"><b-icon icon="pencil"></b-icon><span>Inscríbite</span></a>
             </div>
         </div>
@@ -23,7 +23,7 @@
 export default {
     name: 'Banner',
     props: {
-        curso: {}
+        bgcurso: {}
     }
 }
 </script>
@@ -97,6 +97,10 @@ export default {
 
     span {
         margin-left: 10px;
+    }
+
+    .nombre-curso {
+        margin-bottom: 100px;
     }
 
     @media screen and (min-device-width:1366px){
