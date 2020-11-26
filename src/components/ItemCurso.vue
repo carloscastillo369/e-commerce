@@ -1,6 +1,6 @@
 <template>
     <div class="item">
-        <img class="imagen" :src="`/img/${curso.imagen}.png`" alt="">
+        <img class="imagen" :src="`/img/${curso.imagen}.jpg`" alt="">
         <div class="bg">
             <h3>{{curso.nombre}}</h3>
             <p>{{curso.precio}}</p>

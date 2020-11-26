@@ -1,7 +1,7 @@
 <template>
     <div class="bg-mobile">
         <img src="./../../public/img/mobile-form.png" alt="">
-        <FormPostula style="display:initial"/>
+        <FormPostula id="form2" style="display:initial"/>
     </div>
 </template>
 

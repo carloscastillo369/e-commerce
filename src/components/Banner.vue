@@ -1,13 +1,22 @@
 <template>
-    <div class="banner">
-        <img v-if="curso == undefined"  class="banner-img" src="./../../public/img/banner.png" alt="">
-        <img v-else class="banner-img" :src="`/img/${curso.imagen}.png`" alt="">
-        <div class="contain">
-            <h1>!Explota todo tu potencial <br> tecnológico!</h1>
-            <p>Con nuestro programas de especialización</p>
-            <a href="#formulario"><b-icon icon="pencil"></b-icon><span>Inscríbite</span></a>
+    <div> 
+        <div v-if="curso == undefined" class="banner">
+            <img class="banner-img" src="./../../public/img/banner.png" alt="">
+            <div class="contain">
+                <h1>!Explota todo tu potencial <br> tecnológico!</h1>
+                <p>Con nuestro programas de especialización</p>
+                <a href="#formulario"><b-icon icon="pencil"></b-icon><span>Inscríbite</span></a>
+            </div>
         </div>
-    </div>
+
+        <div v-else class="banner">    
+            <img class="banner-img" :src="`/img/${curso.imagen}.jpg`" alt="">
+            <div class="bg">
+                <h1>{{curso.nombre}}</h1>
+                <a href="#formulario"><b-icon icon="pencil"></b-icon><span>Inscríbite</span></a>
+            </div>
+        </div>
+     </div>
 </template>
 
 <script>
@@ -46,6 +55,18 @@ export default {
         color: #ffffff;
         position: absolute;
         z-index: 10;
+    }
+
+    .bg {
+        width: 100vw;
+        height: 300px;
+        position: absolute;
+        color: #ffffff;
+        z-index: 9;
+        background: linear-gradient(rgba(0, 4, 37, 0), rgb(0, 4, 37));
+        display: flex;
+        align-items: flex-end;
+        padding-left: 20px;
     }
 
     h1 {
@@ -90,6 +111,11 @@ export default {
         .contain {
             width: 1366px;
             padding-top: 204px;
+            padding-left: 86px;
+        }
+
+        .bg {
+            height: 500px;
             padding-left: 86px;
         }
 
