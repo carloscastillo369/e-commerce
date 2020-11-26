@@ -1,0 +1,12 @@
+{
+    "cursos": [
+        { "id": 1, "nombre": "Desarrollo Front-End", "precio": 800, "imagen":"curso-frontend" },
+        { "id": 2, "nombre": "Desarrollo Back-End", "precio": 700, "imagen":"curso-backend" },
+        { "id": 3, "nombre": "Desarrollo de Aplicativos Móviles", "precio": 600, "imagen":"curso-APP" },
+        { "id": 4, "nombre": "Diseño de Experiencia de Usuario", "precio": 900, "imagen":"curso-ux" },
+        { "id": 5, "nombre": "Desarrollo de Videojuegos", "precio": 1100, "imagen":"curso-videojuegos" },
+        { "id": 6, "nombre": "Marketing Digital", "precio": 1200, "imagen":"curso-marketing" },
+        { "id": 7, "nombre": "Data Analytics", "precio": 1000, "imagen":"curso-data" },
+        { "id": 8, "nombre": "Desarrollo Front-End Avanzado", "precio": 950, "imagen":"curso-frontend2" }
+    ]
+}
