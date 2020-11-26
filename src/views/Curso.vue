@@ -2,155 +2,154 @@
     <div class="curso">
         <Header bgdark="bgdark" />
         <Banner :bgcurso="curso"/>
-        <FormMobile/>
-        <div class="contain-desktop">
-            <div class="navegador">
-                <a href="/">Pachaqtec</a> <b-icon icon="chevron-right"></b-icon> <span>{{curso.nombre}}</span>
+        <div class="section">
+            <div class="contain-desktop">
+                <div class="navegador">
+                    <a href="/">Pachaqtec</a> <b-icon icon="chevron-right"></b-icon> <span>{{curso.nombre}}</span>
+                </div>
+
+                <h2>¿En qué consiste el programa de {{curso.nombre}}?</h2>
+                <p>{{curso.descripcion}}</p>
+
+                <h2>Beneficios</h2>
+
+                <div class="beneficios">
+                    <div class="bene">
+                        <img class="bene-img" src="@/assets/bene1.png" alt=""> 
+                        <p>Aprende de Expertos</p>  
+                    </div>
+
+                    <div class="bene">
+                        <img class="bene-img" src="@/assets/bene2.png" alt="">
+                        <p>Clases Virtuales</p>
+                    </div>
+
+                    <div class="bene">
+                        <img class="bene-img" src="@/assets/bene3.png" alt="">
+                        <p>Empleabilidad</p>
+                    </div>
+                </div>
+
+                <h3>Idat otorga:</h3>
+                <p>Tu certificado indicará que has cursado el programa de especialización en {{curso.nombre}} y estará a nombre de Idat.</p>
+
+                <h2>Horarios</h2>
+
+                <div class="horario">
+                    <div class="horario-col1">
+                        <h4>Inicio de clases: <br> 7 de diciembre</h4>
+                    </div>
+                    <div class="horario-col2">
+                        <div class="horario-header">
+                            <h4>Frecuencia</h4>
+                        </div>
+                        <div class="horario-body">
+                            <h5>Lunes, martes y miércoles</h5>
+                            <h5>Jueves (asesoría)</h5>
+                            <h5>Sábados (Hackaton)</h5>
+                        </div>
+                    </div>
+                    <div class="horario-col2">
+                        <div class="horario-header">
+                            <h4>Horario</h4>
+                        </div>
+                        <div class="horario-body">
+                            <h5>7:00 p.m a 9:00 p.m</h5>
+                            <h5>7:00 p.m a 9:00 p.m</h5>
+                            <h5>8:00 a.m a 2:00 p.m</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <h2>¿En qué consiste el programa de {{curso.nombre}}?</h2>
-            <p>{{curso.descripcion}}</p>
-
-            <h2>Beneficios</h2>
-
-            <div class="beneficios">
-                <div class="bene">
-                    <img class="bene-img" src="./../../public/img/bene1.png" alt=""> 
-                    <p>Aprende de Expertos</p>  
+            <div class="contain-mobile">
+                <div class="navegador">
+                    <a href="/">Pachaqtec</a> <b-icon icon="chevron-right"></b-icon> <span>{{curso.nombre}}</span>
                 </div>
 
-                <div class="bene">
-                    <img class="bene-img" src="./../../public/img/bene2.png" alt="">
-                    <p>Clases Virtuales</p>
-                </div>
+                <div class="accordion" role="tablist">
+                    <b-card no-body class="mb-1">
+                        <b-card-header header-tag="header" class="p-1" role="tab">
+                            <b-button block v-b-toggle.accordion-1 variant="info">¿En qué consiste el programa de {{curso.nombre}}?</b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
+                            <b-card-body>
+                              <b-card-text>{{curso.descripcion}}</b-card-text>
+                            </b-card-body>
+                        </b-collapse>
+                    </b-card>
 
-                <div class="bene">
-                    <img class="bene-img" src="./../../public/img/bene3.png" alt="">
-                    <p>Empleabilidad</p>
+                    <b-card no-body class="mb-1">
+                        <b-card-header header-tag="header" class="p-1" role="tab">
+                            <b-button block v-b-toggle.accordion-2 variant="info">Beneficios</b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+                            <b-card-body>
+                                <b-card-text>
+                                    <div class="beneficios">
+                                        <div class="bene">
+                                            <img class="bene-img" src="@/assets/bene1.png" alt=""> 
+                                            <p>Aprende de Expertos</p>  
+                                        </div>
+
+                                        <div class="bene">
+                                            <img class="bene-img" src="@/assets/bene2.png" alt="">
+                                            <p>Clases Virtuales</p>
+                                        </div>
+
+                                        <div class="bene">
+                                            <img class="bene-img" src="@/assets/bene3.png" alt="">
+                                            <p>Empleabilidad</p>
+                                        </div>
+                                    </div>
+
+                                    <h3>Idat otorga:</h3>
+                                    <p>Tu certificado indicará que has cursado el programa de especialización en {{curso.nombre}} y estará a nombre de Idat.</p>
+                                </b-card-text>
+                            </b-card-body>
+                        </b-collapse>
+                    </b-card>
+
+                    <b-card id="formulario" no-body class="mb-1">
+                        <b-card-header header-tag="header" class="p-1" role="tab">
+                            <b-button block v-b-toggle.accordion-3 variant="info">Horarios</b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+                            <b-card-body>
+                                <b-card-text>
+                                    <div class="horario">
+                                        <div class="horario-col1">
+                                            <h4>Inicio de clases: <br> 7 de diciembre</h4>
+                                        </div>
+                                        <div class="horario-col2">
+                                            <div class="horario-header">
+                                                <h4>Frecuencia</h4>
+                                            </div>
+                                            <div class="horario-body">
+                                                <h5>Lunes, martes y miércoles</h5>
+                                                <h5>Jueves (asesoría)</h5>
+                                                <h5>Sábados (Hackaton)</h5>
+                                            </div>
+                                        </div>
+                                        <div class="horario-col2">
+                                            <div class="horario-header">
+                                                <h4>Horario</h4>
+                                            </div>
+                                            <div class="horario-body">
+                                                <h5>7:00 p.m a 9:00 p.m</h5>
+                                                <h5>7:00 p.m a 9:00 p.m</h5>
+                                                <h5>8:00 a.m a 2:00 p.m</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </b-card-text>
+                            </b-card-body>
+                        </b-collapse>
+                    </b-card>
                 </div>
             </div>
-
-            <h3>Idat otorga:</h3>
-            <p>Tu certificado indicará que has cursado el programa de especialización en {{curso.nombre}} y estará a nombre de Idat.</p>
-
-            <h2>Horarios</h2>
-
-            <div class="horario">
-                <div class="horario-col1">
-                    <h4>Inicio de clases: <br> 7 de diciembre</h4>
-                </div>
-                <div class="horario-col2">
-                    <div class="horario-header">
-                        <h4>Frecuencia</h4>
-                    </div>
-                    <div class="horario-body">
-                        <h5>Lunes, martes y miércoles</h5>
-                        <h5>Jueves (asesoría)</h5>
-                        <h5>Sábados (Hackaton)</h5>
-                    </div>
-                </div>
-                <div class="horario-col2">
-                    <div class="horario-header">
-                        <h4>Horario</h4>
-                    </div>
-                    <div class="horario-body">
-                        <h5>7:00 p.m a 9:00 p.m</h5>
-                        <h5>7:00 p.m a 9:00 p.m</h5>
-                        <h5>8:00 a.m a 2:00 p.m</h5>
-                    </div>
-                </div>
-            </div>
+            <FormPostula/>            
         </div>
-
-        <div class="contain-mobile">
-            <div class="navegador">
-                <a href="/">Pachaqtec</a> <b-icon icon="chevron-right"></b-icon> <span>{{curso.nombre}}</span>
-            </div>
-
-            <div class="accordion" role="tablist">
-                <b-card no-body class="mb-1">
-                    <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-1 variant="info">¿En qué consiste el programa de {{curso.nombre}}?</b-button>
-                    </b-card-header>
-                    <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
-                        <b-card-body>
-                          <b-card-text>{{curso.descripcion}}</b-card-text>
-                        </b-card-body>
-                    </b-collapse>
-                </b-card>
-
-                <b-card no-body class="mb-1">
-                    <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-2 variant="info">Beneficios</b-button>
-                    </b-card-header>
-                    <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-                        <b-card-body>
-                            <b-card-text>
-                                <div class="beneficios">
-                                    <div class="bene">
-                                        <img class="bene-img" src="./../../public/img/bene1.png" alt=""> 
-                                        <p>Aprende de Expertos</p>  
-                                    </div>
-
-                                    <div class="bene">
-                                        <img class="bene-img" src="./../../public/img/bene2.png" alt="">
-                                        <p>Clases Virtuales</p>
-                                    </div>
-
-                                    <div class="bene">
-                                        <img class="bene-img" src="./../../public/img/bene3.png" alt="">
-                                        <p>Empleabilidad</p>
-                                    </div>
-                                </div>
-            
-                                <h3>Idat otorga:</h3>
-                                <p>Tu certificado indicará que has cursado el programa de especialización en {{curso.nombre}} y estará a nombre de Idat.</p>
-                            </b-card-text>
-                        </b-card-body>
-                    </b-collapse>
-                </b-card>
-
-                <b-card no-body class="mb-1">
-                    <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-3 variant="info">Horarios</b-button>
-                    </b-card-header>
-                    <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
-                        <b-card-body>
-                            <b-card-text>
-                                <div class="horario">
-                                    <div class="horario-col1">
-                                        <h4>Inicio de clases: <br> 7 de diciembre</h4>
-                                    </div>
-                                    <div class="horario-col2">
-                                        <div class="horario-header">
-                                            <h4>Frecuencia</h4>
-                                        </div>
-                                        <div class="horario-body">
-                                            <h5>Lunes, martes y miércoles</h5>
-                                            <h5>Jueves (asesoría)</h5>
-                                            <h5>Sábados (Hackaton)</h5>
-                                        </div>
-                                    </div>
-                                    <div class="horario-col2">
-                                        <div class="horario-header">
-                                            <h4>Horario</h4>
-                                        </div>
-                                        <div class="horario-body">
-                                            <h5>7:00 p.m a 9:00 p.m</h5>
-                                            <h5>7:00 p.m a 9:00 p.m</h5>
-                                            <h5>8:00 a.m a 2:00 p.m</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </b-card-text>
-                        </b-card-body>
-                    </b-collapse>
-                </b-card>
-            </div>
-
-            
-        </div>
-        <FormPostula/>
         <Footer/>
     </div>
 </template>
@@ -158,7 +157,6 @@
 <script>
 import Header from "@/components/Header.vue"
 import Banner from "@/components/Banner.vue"
-import FormMobile from "@/components/FormMobile.vue"
 import FormPostula from "@/components/FormPostula.vue"
 import Footer from "@/components/Footer.vue"
 import { mapActions, mapState } from "vuex";
@@ -168,7 +166,6 @@ export default {
     components: {
         Header,
         Banner,
-        FormMobile,
         FormPostula,
         Footer
     },
@@ -300,12 +297,16 @@ export default {
 
 
     @media screen and (min-device-width:1366px){
-        .contain-desktop {
-            display: block;
+        .section {
             width: 1366px;
             margin: 0 auto;
-            padding-left: 86px;
-            padding-right: 562px;
+            display: flex;
+        }
+
+        .contain-desktop {
+            display: block;
+            width: 890px;
+            padding: 0 86px;
         }
 
         .navegador {

@@ -1,5 +1,6 @@
 <template>
-    <div class="contain">
+    <div  class="contain">
+        <img src="@/assets/mobile-form.png" alt="">
         <h3>Postula y obtén un 10% de descuento en el programa</h3>
         <form>
             <b-form-input type="text" placeholder="NOMBRE"></b-form-input>
@@ -34,6 +35,10 @@ export default {
         background: #ffffff;
         position: relative;
         z-index: 50;
+    }
+
+    img {
+        display: none;
     }
 
     h3 {
@@ -81,16 +86,25 @@ export default {
 
     @media screen and (min-device-width:1366px){
         .contain {
-            display: none;
+            width: 476px;
+            padding: 75px 0;
+            padding-left: 50px;
+            padding-right: 160px;
+            position: sticky;
+            top: 60px;
+            background:#F2F3F5;
+        }
+
+        img {
+            display: initial;
             position: absolute;
-            margin-top: 70px;
-            margin-right: 66px;
-            width: 240px;
-            height: 450px;
+            z-index: -1;
+            top: 0;
+            left: 0px;
         }
 
         h3 {
-            padding: 0 10px;
+            padding: 0 25px;
             padding-top: 15px;
         }
 

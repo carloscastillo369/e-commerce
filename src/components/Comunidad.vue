@@ -1,6 +1,6 @@
 <template>
     <div class="contain">
-        <img src="./../../public/img/Chinita.png" alt="">
+        <img src="@/assets/Chinita.png" alt="">
         
         <h3>Sé parte de la comunidad</h3>
         
@@ -25,8 +25,8 @@ export default {
 <style scoped>
     .contain {
         width: 375px;
-        height: 516px;
-        margin: 0 auto;
+        height: 516px; 
+        margin: 0 auto; 
         margin-top: 100px;
         background: linear-gradient(#3015FD, #5640FF);
         position: relative;
@@ -58,7 +58,7 @@ export default {
 
     @media screen and (min-device-width:1366px){
         .contain {
-            width: 1366px;
+            width: 890px;
             height: 282px;
             margin-top: 119px;
         }
@@ -73,7 +73,7 @@ export default {
         p {
             font-size: 14px;
             padding-left: 242px;
-            padding-right: 560px;
+            padding-right: 86px;
             margin-bottom: 20px;
         }
 

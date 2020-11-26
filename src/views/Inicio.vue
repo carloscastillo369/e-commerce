@@ -1,13 +1,16 @@
 <template>
-    <div>
+    <div class="body">
         <Header/>
         <Banner/>
-        <FormMobile/>
-        <Respaldo/>
-        <ListCursos/>
-        <Comunidad/>
-        <Beneficios/>
-        <FormPostula/>
+        <div class="section">
+            <div class="main">
+                <Respaldo/>
+                <ListCursos/>
+                <Comunidad/>
+                <Beneficios/>
+            </div>
+            <FormPostula/>        
+        </div>
         <Footer/>
     </div>
 </template>
@@ -15,7 +18,6 @@
 <script>
 import Header from "@/components/Header.vue"
 import Banner from "@/components/Banner.vue"
-import FormMobile from "@/components/FormMobile.vue"
 import Respaldo from "@/components/Respaldo.vue"
 import ListCursos from "@/components/ListCursos.vue"
 import Comunidad from "@/components/Comunidad.vue"
@@ -28,7 +30,6 @@ export default {
     components: {
         Header,
         Banner,
-        FormMobile,
         Respaldo,
         ListCursos,
         Comunidad,
@@ -41,8 +42,16 @@ export default {
 </script>
 
 <style scoped>
-    div {
+    .body {
         background: #F2F3F5;
         width: 100vw;
+    }
+
+    @media screen and (min-device-width:1366px){
+        .section {
+            width: 1366px;
+            display: flex;
+            margin: 0 auto;
+        }
     }
 </style>

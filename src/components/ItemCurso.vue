@@ -8,7 +8,7 @@
                 <button>Agregar al carrito</button>
                 <router-link 
                     :to="{name: 'Curso', params: {id: curso.id}}">
-                    <img class="mas" src="./../../public/img/vermas.png" alt="">
+                    <img class="mas" src="@/assets/vermas.png" alt="">
                     Ver más
                 </router-link>
             </div>

@@ -1,7 +1,7 @@
 <template>
     <div> 
         <div v-if="bgcurso == undefined" class="banner">
-            <img class="banner-img" src="./../../public/img/banner.png" alt="">
+            <img class="banner-img" src="@/assets/banner.png" alt="">
             <div class="contain">
                 <h1>!Explota todo tu potencial <br> tecnológico!</h1>
                 <p>Con nuestro programas de especialización</p>

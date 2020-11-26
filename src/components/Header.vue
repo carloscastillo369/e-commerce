@@ -2,10 +2,10 @@
     <div :class="['header', bgdark]">     
         <div class="contain">
             <div class="logo">
-                <img src="./../../public/img/logo.png">
+                <img src="@/assets/logo.png">
                 <div class="logo-text">
-                    <img src="./../../public/img/logo-nombre.png">
-                    <img src="./../../public/img/logo-foot.png">
+                    <img src="@/assets/logo-nombre.png">
+                    <img src="@/assets/logo-foot.png">
                 </div>
             </div>
 

@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
         <div class="contain">
-            <img src="./../../public/img/footer.png" alt="">
+            <img src="@/assets/footer.png" alt="">
         </div>
     </div>
 </template>
@@ -37,6 +37,7 @@ export default {
         .contain {
             width: 1366px;
             padding-left: 70px;
+            margin-top: 50px;
         }
     }
 </style>

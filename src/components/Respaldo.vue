@@ -1,6 +1,6 @@
 <template>
     <div class="contain">
-        <img src="./../../public/img/respaldo.png" alt="">
+        <img src="@/assets/respaldo.png" alt="">
     </div>
 </template>
 
@@ -14,16 +14,17 @@ export default {
     .contain {
         width: 375px;
         height: 150px;
-        margin: 0 auto;
+        margin: 0 auto; 
         padding: 10px;
         padding-top: 40px;
     }
 
     @media screen and (min-device-width:1366px){
         .contain {
-            width: 1366px;
+            width: 890px;
             height: 180px;
-            padding: 48px 85px;
+            padding: 48px 86px;
+            margin: 0;
         }
     }
 </style>

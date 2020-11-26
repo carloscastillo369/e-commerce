@@ -58,9 +58,8 @@ export default {
 
     @media screen and (min-device-width:1366px){
         .list {
-            width: 1366px;
-            padding-left: 86px;
-            padding-right: 562px;
+            width: 890px;
+            padding: 0 86px;
         }
 
         .items {
