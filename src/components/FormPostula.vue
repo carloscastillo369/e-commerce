@@ -3,10 +3,38 @@
         <img src="@/assets/mobile-form.png" alt="">
         <h3>Postula y obtén un 10% de descuento en el programa</h3>
         <form>
-            <b-form-input type="text" placeholder="NOMBRE"></b-form-input>
-            <b-form-input type="number" placeholder="CELULAR"></b-form-input>
-            <b-form-input type="email" placeholder="CORREO ELECTRÓNICO"></b-form-input>
-            <b-form-input type="text" placeholder="PROGRAMA"></b-form-input>
+            <b-form-input 
+                id="input-1"
+                v-model="form.nombre"
+                type="text" 
+                placeholder="NOMBRE"
+
+            >
+            </b-form-input>
+
+            <b-form-input 
+                id="input-2"
+                v-model="form.telefono"
+                type="number" 
+                placeholder="TELEFONO / CELULAR"
+            >
+            </b-form-input>
+
+            <b-form-input 
+                id="input-3"
+                v-model="form.email"
+                type="email" 
+                placeholder="CORREO ELECTRÓNICO"
+            >
+            </b-form-input>
+
+            <b-form-select
+                id="input-4"
+                v-model="form.programa"
+                :options="programas"
+            >
+            </b-form-select>
+
             <b-form-checkbox
                 id="checkbox-1"
                 name="checkbox-1"
@@ -14,6 +42,7 @@
                 unchecked-value="not_accepted"
             >
             <p>Acepto las Políticas de privacidad</p> 
+            <p>{{form.nombre}} {{form.telefono}} {{form.email}} {{form.programa}}</p>
             </b-form-checkbox>
             
             <b-button type="submit">Quiero Postular</b-button>
@@ -23,7 +52,25 @@
 
 <script>
 export default {
-    name: 'FormPostula'
+    name: 'FormPostula',
+    data() {
+        return {
+            form: {
+                nombre:'',
+                telefono:'',
+                email:'',
+                programa: null
+            },
+            programas: [
+                { text: 'Programa', value: null }, 
+                'Front-End', 
+                'Back-end', 
+                'Desarrollo de Aplicativos Móviles', 
+                'Diseño de Experiencia de Usuario',
+                'Desarrollo de Videojuegos'
+            ]
+        }
+    },
 }
 </script>
 
@@ -56,7 +103,7 @@ export default {
         justify-content: center;
     }
 
-    input {
+    input, select {
         width: 355px;
         height: 50px;
         border-radius: 5px;
@@ -108,7 +155,7 @@ export default {
             padding-top: 15px;
         }
 
-        input {
+        input, select {
             width: 216px;
             height: 50px;
             margin-bottom: 15px;
