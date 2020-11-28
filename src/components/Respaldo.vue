@@ -1,6 +1,6 @@
 <template>
     <div class="contain">
-        <img src="@/assets/respaldo.png" alt="">
+        <img src="@/assets/respaldo-dark.png" alt="">
     </div>
 </template>
 

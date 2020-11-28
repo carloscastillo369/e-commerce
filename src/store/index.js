@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     cursos: [],
-    curso: {}
+    curso: {},
+    carrito: []
   },
 
   mutations: {
@@ -16,12 +17,16 @@ export default new Vuex.Store({
 
     getCursoMutation(state, payload) {
       state.curso = payload;
+    },
+
+    addCarritoMutation(state, payload) {
+      state.carrito.push(payload);
     }
   },
 
   actions: {
     getCursosAction({commit}) {
-      fetch('http://localhost:3000/cursos', {
+      fetch('http://my-json-server.typicode.com/carloscastillo369/cursosjson/cursos', {
         method: 'GET'
       })
         .then(res => {
@@ -33,7 +38,7 @@ export default new Vuex.Store({
     },
 
     getCursoAction({commit}, id) {
-      fetch(`http://localhost:3000/cursos/${id}`, {
+      fetch(`http://my-json-server.typicode.com/carloscastillo369/cursosjson/cursos/${id}`, {
         method: 'GET'
       })
         .then(res => {
@@ -41,6 +46,21 @@ export default new Vuex.Store({
       })
         .then(data => {
           commit('getCursoMutation', data);
+      })
+    },
+
+    addCarritoAction({commit, state}, curso){
+      fetch(`http://my-json-server.typicode.com/carloscastillo369/cursosjson/cursos/${curso.id}`, {
+        method: 'GET'
+      })
+        .then(res => {
+          return res.json();
+      })
+        .then(data => {
+          state.carrito.hasOwnProperty(curso.id)
+            ? curso.cantidad = state.carrito[curso.id].cantidad + 1
+            : curso.cantidad = 1
+          commit('addCarritoMutation', data);
       })
     }
   },

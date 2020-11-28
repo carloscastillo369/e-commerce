@@ -5,7 +5,7 @@
             <h3>{{curso.nombre}}</h3>
             <p>S/. {{curso.precio}}</p>
             <div class="enlaces">
-                <button>Agregar al carrito</button>
+                <button @click="agregar(curso)">Agregar al carrito</button>
                 <router-link 
                     :to="{name: 'Curso', params: {id: curso.id}}">
                     <img class="mas" src="@/assets/vermas.png" alt="">
@@ -22,12 +22,19 @@
 </template>
 
 <script>
+import { mapActions } from "vuex"
+
 export default {
     name: 'ItemCurso',
     props: {
         curso:{}
+    },
+    methods: {
+        ...mapActions(['addCarritoAction']),
+        agregar(curso){
+            this.addCarritoAction(curso)
+        }
     }
-
 }
 </script>
 
